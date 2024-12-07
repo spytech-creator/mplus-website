@@ -1,0 +1,211 @@
+#banner {
+    position: relative;
+    height: 100vh;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+#banner video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: auto;
+    min-height: auto;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #banner video {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #banner video {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) and (max-resolution: 1dppx) {
+    #banner video {
+        display: none;
+    }
+
+    #banner {
+        background: url('images/mobile-banner-bg.jpg') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+#bannerCarousel {
+    width: 100%;
+}
+
+#bannerCarousel .carousel-item {
+    height: 100vh;
+}
+
+#bannerCarousel .carousel-caption {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#bannerCarousel .carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+#bannerCarousel .carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+@media (max-width: 767px) {
+    #bannerCarousel .carousel-caption h5 {
+        font-size: 30px;
+    }
+
+    #bannerCarousel .carousel-caption p {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.benefits-title {
+    color: #333;
+}
+
+.benefits-title span {
+    color: #8BC34A;
+}
+
+.benefit-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(139, 195, 74, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8BC34A;
+    font-size: 1.2rem;
+}
+
+.benefit-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-text p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    bottom: 270px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.testimonialCarousel .carousel-item {
+    min-height: 350px;
+}
+
+.testimonialCarousel .carousel-caption {
+    position: relative;
+    right: auto;
+    left: auto;
+    color: #000;
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
