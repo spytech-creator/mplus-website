@@ -1,3 +1,24 @@
+:root {
+    --primary-color: rgba(219, 17, 17, 0.918);
+    --secondary-color: rgba(244, 117, 117, 0.758);
+    --text-color: black;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
 #banner {
     position: relative;
     height: 100vh;
@@ -9,37 +30,22 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: auto;
-    min-height: auto;
+    min-width: 100%;
+    min-height: 100%;
     width: auto;
     height: auto;
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
 }
 
-@media (max-aspect-ratio: 16/9) {
-    #banner video {
-        width: auto;
-        height: auto;
-    }
-}
-
-@media (min-aspect-ratio: 16/9) {
-    #banner video {
-        width: auto;
-        height: auto;
-    }
-}
-
-@media (max-width: 767px) and (max-resolution: 1dppx) {
-    #banner video {
-        display: none;
-    }
-
-    #banner {
-        background: url('images/mobile-banner-bg.jpg') no-repeat center center;
-        background-size: cover;
-    }
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
 .banner-content {
@@ -73,139 +79,111 @@
     bottom: auto;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-#bannerCarousel .carousel-caption h5 {
-    font-size: 45px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 25px;
+#bannerCarousel .carousel-caption h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 #bannerCarousel .carousel-caption p {
-    width: 75%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 @media (max-width: 767px) {
-    #bannerCarousel .carousel-caption h5 {
-        font-size: 30px;
+    #bannerCarousel .carousel-caption h1 {
+        font-size: 1.8rem;
     }
 
     #bannerCarousel .carousel-caption p {
-        width: 100%;
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
 
-.product-image {
-    max-width: 100%;
-    height: auto;
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
-.testimonial-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
-.benefits-title {
-    color: #333;
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
-.benefits-title span {
-    color: #8BC34A;
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
 }
 
 .benefit-icon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background-color: rgba(139, 195, 74, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #8BC34A;
-    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.benefit-text h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.product-image {
+    transition: transform 0.3s ease;
 }
 
-.benefit-text p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.carousel-item {
-    height: 100vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.carousel-caption {
-    bottom: 270px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.carousel-caption h5 {
-    font-size: 45px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 25px;
-}
-
-.carousel-caption p {
-    width: 75%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9;
-}
-
-.testimonialCarousel .carousel-item {
-    min-height: 350px;
-}
-
-.testimonialCarousel .carousel-caption {
-    position: relative;
-    right: auto;
-    left: auto;
-    color: #000;
+.product-image:hover {
+    transform: scale(1.05);
 }
 
 .testimonial-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    /* 16:9 aspect ratio */
-}
-
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    /* border-radius: 50%; */
+    margin-bottom: 20px;
+    border: 3px solid var(--primary-color);
+}
+
+#buyForm {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+}
+
+footer {
+    background-color: #333;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+@media (max-width: 767px) {
+    #bannerCarousel .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    #bannerCarousel .carousel-caption p {
+        font-size: 1rem;
+    }
 }
