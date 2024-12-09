@@ -195,3 +195,218 @@ footer a:hover {
         font-size: 1rem;
     }
 }
+
+#bottom-banner {
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.banner-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-title {
+    font-size: 1rem;
+    /* Updated */
+    margin-bottom: 0;
+}
+
+.banner-text {
+    font-size: 0.8rem;
+    /* Updated */
+}
+
+.banner-button {
+    white-space: nowrap;
+    padding: 0.25rem 0.5rem;
+    /* Updated */
+    font-size: 1.0rem;
+    /* Updated */
+}
+
+@media (max-width: 767px) {
+    .banner-title {
+        font-size: 1.5rem;
+        /* Updated */
+    }
+
+    .banner-button {
+        font-size: 0.75rem;
+        /* Updated */
+        padding: 0.4rem 0.6rem;
+        /* Updated */
+    }
+}
+
+@media (max-width: 575px) {
+    .banner-title {
+        font-size: 1.0rem;
+    }
+}
+
+/* Timer Section Styles */
+#timer {
+    background-color: white;
+    padding: 2rem 0;
+}
+
+.order-button {
+    background-color: #C41E3A;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: ring 2s ease-in-out infinite;
+}
+
+.order-button:hover {
+    background-color: #a01830;
+    transform: scale(1.05);
+    animation: none;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    1% {
+        transform: rotate(30deg) scale(1.1);
+    }
+    3% {
+        transform: rotate(-28deg) scale(1.1);
+    }
+    5% {
+        transform: rotate(34deg) scale(1.1);
+    }
+    7% {
+        transform: rotate(-32deg) scale(1.1);
+    }
+    9% {
+        transform: rotate(30deg) scale(1.1);
+    }
+    11% {
+        transform: rotate(-28deg) scale(1.1);
+    }
+    13% {
+        transform: rotate(26deg) scale(1.1);
+    }
+    15% {
+        transform: rotate(-24deg) scale(1.1);
+    }
+    17% {
+        transform: rotate(22deg) scale(1.1);
+    }
+    19% {
+        transform: rotate(-20deg) scale(1.1);
+    }
+    21% {
+        transform: rotate(18deg) scale(1.05);
+    }
+    23% {
+        transform: rotate(-16deg) scale(1.05);
+    }
+    25% {
+        transform: rotate(14deg) scale(1.05);
+    }
+    27% {
+        transform: rotate(-12deg) scale(1.05);
+    }
+    29% {
+        transform: rotate(10deg) scale(1.05);
+    }
+    31% {
+        transform: rotate(-8deg) scale(1.05);
+    }
+    33% {
+        transform: rotate(6deg) scale(1.02);
+    }
+    35% {
+        transform: rotate(-4deg) scale(1.02);
+    }
+    37% {
+        transform: rotate(2deg) scale(1.02);
+    }
+    39% {
+        transform: rotate(-1deg) scale(1.01);
+    }
+    41% {
+        transform: rotate(1deg) scale(1);
+    }
+    43% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.timer-text {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.countdown-box {
+    background-color: #C41E3A;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    min-width: 120px;
+}
+
+.countdown-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .countdown-box {
+        padding: 0.8rem 1.5rem;
+        min-width: 100px;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+    }
+
+    .countdown-label {
+        font-size: 0.9rem;
+    }
+
+    .timer-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .countdown-box {
+        padding: 0.6rem 1rem;
+        min-width: 80px;
+    }
+
+    .countdown-value {
+        font-size: 1.5rem;
+    }
+
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+}
+
