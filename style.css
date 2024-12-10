@@ -410,3 +410,35 @@ footer a:hover {
     }
 }
 
+.limited-offer-container {
+    animation: bounce 2s infinite;
+}
+
+.price-slash-title {
+    color: #333;
+    font-weight: bold;
+}
+
+.price-container {
+    margin: 20px 0;
+}
+
+.original-price {
+    margin: 0;
+    font-weight: bold;
+}
+
+.new-price {
+    margin: 0;
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
