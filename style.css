@@ -172,7 +172,7 @@ body {
 }
 
 #buyForm {
-    background-color: var(--light-bg);
+    background-color: rgb(244, 216, 216);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, .1);

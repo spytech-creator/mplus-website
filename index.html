@@ -560,7 +560,7 @@
     </section>
 
     <!-- Buy Form -->
-    <section id="buy" class="py-5">
+    <section class="py-5">
         <div class="container">
             <h2 class="text-center section-title" data-aos="fade-up">Buy Mplus</h2>
             <div class="row justify-content-center">
@@ -574,45 +574,54 @@
                             Have
                             Money To Pay At Point Of Delivery. This Could Save Us Time And Resources. If You Are not Yet
                             Ready, Tap on the Telephone Icon <a href="tel:+233241927222" class="mx-2 text-white"><i
-                                    class="fs-5 fas fa-phone"></i></a> To Save Our Number Then Call Us When Your Ready To Buy. Please Do Not
+                                    class="fs-5 fas fa-phone"></i></a> To Save Our Number Then Come Back To Buy On The Website. Please Do Not
                             Order If You Will Be
                             Traveling Within The Period Of Delivery.
                         </p>
                     </div>
-
                 </div>
-                <div class="col-md-8">
-                    <form id="buyForm" class="needs-validation" novalidate data-aos="fade-up">
-                        <div class="mb-3">
-                            <label for="product" class="form-label">Package</label>
-                            <select class="form-select" id="product" required>
-                                <option value="">Select Your Package</option>
-                                <option value="Buy 1 Get Free Delivery (GH₵ 500)">Buy 1 Get Free Delivery (GH₵ 500)
-                                </option>
-                                <option value="Buy 2 Get Free Delivery (GH₵ 950)">Buy 2 Get Free Delivery (GH₵ 950)
-                                </option>
-                                <option value="Buy 3 Get Free Delivery (GH₵ 1,400)">Buy 3 Get Free Delivery (GH₵ 1,400)
-                                </option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="altphone" class="form-label">Alternate Phone Number</label>
-                            <input type="tel" class="form-control" id="altphone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Place Your Order Now</button>
-                    </form>
+
+                <div id="buy" class="row justify-content-center" data-aos="fade-up">
+                    <h1 class="fs-1 fw-bolder text-center text-danger mt-2 mb-2">Fill The Form Below To Order ...</h1>
+
+                    <div class="col-md-8">
+                        <form id="buyForm" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="product" class="form-label">Package</label>
+                                <select class="form-select" id="product" required>
+                                    <option value="">Select Your Package</option>
+                                    <option value="Buy 1 Get Free Delivery (GH₵ 500)">Buy 1 Get Free Delivery (GH₵ 500)
+                                    </option>
+                                    <option value="Buy 2 Get Free Delivery (GH₵ 950)">Buy 2 Get Free Delivery (GH₵ 950)
+                                    </option>
+                                    <option value="Buy 3 Get Free Delivery (GH₵ 1,400)">Buy 3 Get Free Delivery (GH₵
+                                        1,400)
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone Number"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="altphone" class="form-label">Alternate Phone Number</label>
+                                <input type="tel" class="form-control" id="altphone"
+                                    placeholder="Enter Your Alternate Phone Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Delivery Address</label>
+                                <input type="text" class="form-control" id="address"
+                                    placeholder="Enter Your Delivery Address" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Place Your Order Now</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
